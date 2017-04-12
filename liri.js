@@ -10,9 +10,9 @@
 //to add other programs to this one
 var dataKeys = require("./keys.js");
 var fs = require('fs'); //file system
-var twitter = require('twitter');
-var spotify = require('spotify');
-var request = require('request');
+var Twitter = require('twitter');
+var Spotify = require('spotify');
+var Request = require('request');
 
 
 var writeToLog = function(data) {
@@ -63,7 +63,7 @@ var getMeSpotify = function(songName) {
 
 
 var getTweets = function() {
-    var client = new twitter(dataKeys.twitterKeys);
+    var client = new Twitter(dataKeys.twitterKeys);
 
     var params = { screen_name: 'Abby Cadabby', count: 10 };
 
